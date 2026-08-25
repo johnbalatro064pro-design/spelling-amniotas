@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical" android:padding="18dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/title" android:text="Spelling Bee Coach"
+            android:textSize="28sp" android:textStyle="bold"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/status" android:text="Add your words below."
+            android:textSize="15sp" android:layout_marginTop="6dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <EditText android:id="@+id/wordInput"
+            android:hint="Paste words here — one per line"
+            android:gravity="top" android:minLines="6"
+            android:inputType="textMultiLine|textCapWords"
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/saveWords" android:text="Save Word List"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/startRound" android:text="Start Practice"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/wordCounter" android:text="No round started"
+            android:textSize="16sp" android:gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/wordPrompt" android:text="Your word will be announced here"
+            android:textSize="22sp" android:textStyle="bold" android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/showWord" android:text="👀 Show Word"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/targetWord" android:text="••••••"
+            android:textSize="32sp" android:textStyle="bold" android:gravity="center"
+            android:visibility="gone"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/spelledLetters" android:text="Your letters: "
+            android:textSize="25sp" android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/voiceButton" android:text="🎤 Speak Next Letter"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/heard" android:text="Heard: —"
+            android:textSize="20sp" android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/feedback" android:text="Instant feedback will appear here."
+            android:textSize="20sp" android:textStyle="bold" android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/backspace" android:text="⌫" android:layout_weight="1"
+                android:layout_width="0dp" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/clearLetters" android:text="Clear" android:layout_weight="1"
+                android:layout_width="0dp" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/checkSpelling" android:text="✓ Check" android:layout_weight="1"
+                android:layout_width="0dp" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView android:text="Keyboard"
+            android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="10dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <GridLayout android:id="@+id/keyboard" android:columnCount="6"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/review" android:text="Missed-word review will appear here."
+            android:textSize="17sp" android:layout_marginTop="18dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>
